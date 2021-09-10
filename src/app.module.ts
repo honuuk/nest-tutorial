@@ -3,10 +3,12 @@ import { ConfigModule } from '@nestjs/config';
 import * as Joi from '@hapi/joi';
 
 import { PostsModule } from './posts/posts.module';
+import { DatabaseModule } from './database.module';
 
 @Module({
   imports: [
     PostsModule,
+    DatabaseModule,
     ConfigModule.forRoot({
       validationSchema: {
         DB_HOST: Joi.string().required(),
