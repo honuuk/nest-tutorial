@@ -1,4 +1,5 @@
-export class CreatePostDto {
+export interface Post {
+  id: number;
   content: string;
   title: string;
 }
