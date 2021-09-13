@@ -23,8 +23,8 @@ export class PostsController {
   }
 
   @Put(':id')
-  async replacePost(@Param('id') id: string, @Body() updatePostDto: UpdatePostDto) {
-    return this.postsService.replacePost(Number(id), updatePostDto);
+  async updatePost(@Param('id') id: string, @Body() updatePostDto: UpdatePostDto) {
+    return this.postsService.updatePost(Number(id), updatePostDto);
   }
 
   @Delete(':id')
