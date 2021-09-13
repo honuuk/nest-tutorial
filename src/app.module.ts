@@ -10,13 +10,13 @@ import { DatabaseModule } from './database.module';
     PostsModule,
     DatabaseModule,
     ConfigModule.forRoot({
-      validationSchema: {
+      validationSchema: Joi.object({
         DB_HOST: Joi.string().required(),
         DB_PORT: Joi.number().required(),
         DB_USER: Joi.string().required(),
         DB_DATABASE: Joi.string().required(),
         PORT: Joi.number(),
-      },
+      }),
     }),
   ],
   controllers: [],

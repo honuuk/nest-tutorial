@@ -11,7 +11,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         type: 'postgres',
         host: configService.get('DB_HOST'),
         port: configService.get('DB_PORT'),
-        username: configService.get('DB_USERNAME'),
+        username: configService.get('DB_USER'),
         database: configService.get('DB_DATABASE'),
         entities: [__dirname + 'src/**/*.entity.ts'],
         synchronize: true,
