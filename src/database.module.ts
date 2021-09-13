@@ -13,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         port: configService.get('DB_PORT'),
         username: configService.get('DB_USERNAME'),
         database: configService.get('DB_DATABASE'),
-        entities: [__dirname + '/../**/*.entity.ts'],
+        entities: [__dirname + 'src/**/*.entity.ts'],
         synchronize: true,
       }),
     }),
